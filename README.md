@@ -119,7 +119,7 @@ The AST is defined as a JSON compatible notation. Bellow we have a hello world, 
             },
             "rhs": {
               "type": "var",
-              "name": "who
+              "name": "who"
             }
           }
         },
