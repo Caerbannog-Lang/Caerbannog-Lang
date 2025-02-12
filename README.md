@@ -178,9 +178,13 @@ Considering `print` plugin defined as following:
 ```js
 print: {
   "args": [ "s" ],
-  "call": (args, cb) => {
-    console.log(args.s)
-    cb.accept(s)
+  "call": (args) => {
+    const s = `${args.s}` // coalesces args.s to a string
+    console.log(s)
+    return {
+       value: s,
+       type: 'string'
+    }
   }
 }
 ```
